@@ -16,4 +16,4 @@ def get_result():
     player_2_choice = request.form.get ('player_2_choice')
     player_2 = Player(player_2_name, player_2_choice)
 
-    return render_template (index.html, player_1_name, player_1_choice, player_2_name, player_2_choice )
+    return render_template ('index.html', 'player_1_name', 'player_1_choice', 'player_2_name', 'player_2_choice' )
