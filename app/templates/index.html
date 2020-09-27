@@ -1,19 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-  <title>Rock, Paper, Scissors App</title>
-</head>
-<body>
-  <nav>
-    <ul>
-        <li><a href="/">Home</a> </li>
-    </ul>
-</nav>
-  <h1>Rock, Paper, Scissors Game</h1>
+{% extends "layout.html" %}
 
+{% block content %}
+  <form action="/get-result" method="POST">
+    <div>
+      <label for="player1">Player 1</label>
+      <input type="text" name="player1_name" id="player1_name">
+    </div>
+    <div>
+      <label for="player1_choose">Rock, Paper, Scissors</label>
+      <select name="player1_choose" id="player1_choose">
+        <option value="Rock">Rock </option>>
+        <option value="Paper">Paper </option>
+        <option value="Scissors">Scissors</option>
+      </select>  
+    </div>
+    <div>
+      <label for="player2">Player 2</label>
+      <input type="text" name="player1_name" id="player1_name">
+      </div>
+
+    <div>
+      <label for="player1_choose">Rock, Paper, Scissors</label>
+      <select name="player1_choose" id="player1_choose">
+        <option value="Rock">Rock </option>>
+        <option value="Paper">Paper </option>
+        <option value="Scissors">Scissors</option>
+      </select>  
+    </div>
+    <div>
+      <input type="submit" id="submit" value="Play">
+    </div>
+  </form>
 
 </body>
 </html>
+
+{% endblock %}
